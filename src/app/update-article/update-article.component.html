@@ -1,0 +1,26 @@
+<h3>Update Article</h3>
+<div style="width: 400px;">
+  <form >
+    <div class="form-group">
+      <label for="name">Id de l'article</label>
+      <input type="text" class="form-control" id="idArticle" required [(ngModel)]="article.idArticle" name="idArticle">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Description</label>
+      <input type="text" class="form-control" id="description" required [(ngModel)]="article.description" name="description">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Brand</label>
+      <input type="text" class="form-control" id="brand" required [(ngModel)]="article.brand" name="brand">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Price</label>
+        <input type="text" class="form-control" id="price" required [(ngModel)]="article.price" name="price">
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

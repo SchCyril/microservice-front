@@ -1,0 +1,46 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #articleForm="ngForm">
+        <div class="form-group">
+          <label for="id">Id</label>
+          <input type="text" [(ngModel)]="article.idArticle" 
+            class="form-control" 
+            id="id"
+            name="id"
+            placeholder="Enter your name"
+            required #name="ngModel">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" [(ngModel)]="article.description" 
+            class="form-control" 
+            id="description" 
+            name="description" 
+            placeholder="Enter the description"
+            required #description="ngModel">
+        </div>
+        <div class="form-group">
+          <label for="brand">Brand</label>
+          <input type="text" [(ngModel)]="article.brand" 
+            class="form-control" 
+            id="brand" 
+            name="brand" 
+            placeholder="Enter the brand"
+            required #brand="ngModel">
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text" [(ngModel)]="article.price" 
+            class="form-control" 
+            id="price" 
+            name="price" 
+            placeholder="Enter the price"
+            required #price="ngModel">
+        </div>
+        <button type="submit" [disabled]="!articleForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+  

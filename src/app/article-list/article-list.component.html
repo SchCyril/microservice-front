@@ -1,0 +1,27 @@
+<h1>Liste des articles</h1>
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Description</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Unitary Price</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let article of articles">
+            <td>{{ article.idArticle }}</td>
+            <td>{{ article.description }}</td>
+            <td>{{ article.brand }}</td>
+            <td>{{ article.price }}</td>
+            <td><button (click)="deleteArticle(article.idArticle)" class='btn btn-danger'><i class="fa fa-futboll-0">Delete</i></button>        
+            <button type="button" class="btn btn-primary" (click)="setId(article.idArticle)" routerLink="/articles/{{article.idArticle}}">Modifier</button>
+            </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
